@@ -2,4 +2,4 @@ Those images are builded on a VM running Ubuntu 18.10, and based on the source c
 
 https://github.com/syphyr/android_kernel_samsung_msm8976
 
-Starting from 08/03/2019, all kernels compiled by me, will be based on LineageOS 16.0
+Based on LineageOS 16.0 sources.
