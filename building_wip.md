@@ -1,8 +1,8 @@
-## Download the syphyr kernel source:
+# Download the syphyr kernel source:
 
 `git clone -b lineage-16.0 https://github.com/syphyr/android_kernel_samsung_msm8976.git`
 
-# Download the google cross compiler, depth=1 is sufficient, don't need the commit history for it:
+## Download the google cross compiler, depth=1 is sufficient, don't need the commit history for it:
 
 `git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/`
 
@@ -26,16 +26,16 @@ https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tu
 
 **As reported by the diffs above**
 
-# Setup the cross compiler
+# Configure the cross compiler:
 `cd aarch64-linux-android-4.9`
 
 `export CROSS_COMPILE=$(pwd)/bin/aarch64-linux-android-`
 
-# set the architecture
+## Set the architecture:
 
 `export ARCH=arm64 && export SUBARCH=arm64`
 
-# build the kernel
+# Build the kernel:
 
 `cd ../android_kernel_samsung_msm8976`
 
@@ -47,12 +47,12 @@ https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tu
 
 `make -j$(nproc --all)`
 
-# You will probably get the error message "msm_dba_internal.h not found"
+## You will probably get the error message "msm_dba_internal.h not found"
 
-# Fix it by changing the include
+## Fix it by changing the include
 
 `sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c`
 
-# Re-launch the build process
+## Re-launch the build process
 
 `make -j$(nproc --all)`
