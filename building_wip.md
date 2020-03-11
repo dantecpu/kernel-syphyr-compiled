@@ -14,8 +14,15 @@
 
 You can use the snapshot version too.
 
-**You will need to manually adjust https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_dst_cache.c
-and https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tunnel.c as reported by the diffs.**
+**You will need to manually adjust:**
+
+https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_dst_cache.c
+
+**and**
+
+https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tunnel.c
+
+**as reported by the diffs above**
 
 # setup the cross compiler
 ```cd aarch64-linux-android-4.9```
