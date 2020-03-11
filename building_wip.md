@@ -1,16 +1,16 @@
-# download the syphyr kernel source
+## Download the syphyr kernel source:
 
-```git clone -b lineage-16.0 https://github.com/syphyr/android_kernel_samsung_msm8976.git```
+`git clone -b lineage-16.0 https://github.com/syphyr/android_kernel_samsung_msm8976.git`
 
-# download the google cross compiler, depth=1 is sufficient, don't need the commit history for it
+# Download the google cross compiler, depth=1 is sufficient, don't need the commit history for it:
 
-```git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/```
+`git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/`
 
 **You will need to use specific version, or else will fail building, aka use this version:**
 
 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+/22f053ccdfd0d73aafcceff3419a5fe3c01e878b
 
-# download wireguard
+# Download wireguard:
 
 ```git clone --depth=1 https://git.zx2c4.com/wireguard-linux-compat```
 
@@ -24,34 +24,35 @@ https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_dst_ca
 
 https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tunnel.c
 
-**as reported by the diffs above**
+**As reported by the diffs above**
 
-# setup the cross compiler
-```cd aarch64-linux-android-4.9```
+# Setup the cross compiler
+`cd aarch64-linux-android-4.9`
 
-```export CROSS_COMPILE=$(pwd)/bin/aarch64-linux-android-```
+`export CROSS_COMPILE=$(pwd)/bin/aarch64-linux-android-`
 
 # set the architecture
 
-```export ARCH=arm64 && export SUBARCH=arm64```
+`export ARCH=arm64 && export SUBARCH=arm64`
 
 # build the kernel
 
-```cd ../android_kernel_samsung_msm8976```
+`cd ../android_kernel_samsung_msm8976`
 
-```make clean```
+`make clean`
 
-```make mrproper```
+`make mrproper`
 
-```make gts210vewifi_defconfig```
+`make gts210vewifi_defconfig`
 
-```make -j$(nproc --all)```
+`make -j$(nproc --all)`
 
-# you will probably get the error message "msm_dba_internal.h not found"
-# fix it by changing the include
+# You will probably get the error message "msm_dba_internal.h not found"
 
-```sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c```
+# Fix it by changing the include
 
-# re-launch the build process
+`sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c`
 
-```make -j$(nproc --all)```
+# Re-launch the build process
+
+`make -j$(nproc --all)`
