@@ -31,9 +31,11 @@ and https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_ud
 ```export CROSS_COMPILE=$(pwd)/bin/aarch64-linux-android-```
 
 # set the architecture
-```export ARCH=arm64 && export SUBARCH=arm64``````
+
+```export ARCH=arm64 && export SUBARCH=arm64```
 
 # build the kernel
+
 ```cd ../android_kernel_samsung_msm8976```
 
 ```make clean```
@@ -46,7 +48,9 @@ and https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_ud
 
 # you will probably get the error message "msm_dba_internal.h not found"
 # fix it by changing the include
+
 ```sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c```
 
 # re-launch the build process
+
 ```make -j$(nproc --all)```
