@@ -6,7 +6,9 @@
 
 ```git clone --depth=1 https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/```
 
-**You will need to use specific version, or else will fail building, aka use this version: https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+/22f053ccdfd0d73aafcceff3419a5fe3c01e878b**
+**You will need to use specific version, or else will fail building, aka use this version:**
+
+https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/+/22f053ccdfd0d73aafcceff3419a5fe3c01e878b
 
 # download wireguard
 
