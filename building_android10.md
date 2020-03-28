@@ -1,6 +1,6 @@
 # Download the kernel source:
 
-`git clone -b lineage-16.0 https://github.com/samsung-msm8976.git`
+`git clone -b lineage-17.1 https://github.com/samsung-msm8976.git`
 
 ## Download the google cross compiler, depth=1 is sufficient, don't need the commit history for it:
 
