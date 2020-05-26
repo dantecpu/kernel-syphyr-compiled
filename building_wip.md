@@ -14,7 +14,7 @@ https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch6
 
 ```git clone --depth=1 https://git.zx2c4.com/wireguard-linux-compat```
 
-You can use the snapshot version too.
+Every builded version will be based on latest snapshot, unless problems, in that case will be reverted to latest stable.
 
 **You will need to manually adjust:**
 
