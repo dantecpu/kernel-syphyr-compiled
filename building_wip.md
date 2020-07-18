@@ -14,7 +14,7 @@ https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch6
 
 ```git clone --depth=1 https://git.zx2c4.com/wireguard-linux-compat```
 
-**Modify the wireguard sources to allow compilation:**
+**Modify the following wireguard sources to allow compilation:**
 
 https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_dst_cache.c
 
@@ -41,7 +41,7 @@ https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tu
 
 `make -j$(nproc --all)`
 
-You will probably get the error message "msm_dba_internal.h not found", fix it by changing the include:
+You will likely get the error message "msm_dba_internal.h not found", fix it by changing the include:
 
 **sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c**
 
