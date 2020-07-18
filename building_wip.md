@@ -43,7 +43,7 @@ https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tu
 
 You will likely get the error message "msm_dba_internal.h not found", fix it by changing the include:
 
-**sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c**
+``sed -i 's/#include <msm_dba_internal.h>/#include "msm_dba_internal.h"/' drivers/video/msm/msm_dba/msm_dba.c``
 
 ## Re-launch the build process
 
