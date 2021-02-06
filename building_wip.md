@@ -16,9 +16,15 @@ https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch6
 
 **Modify the following wireguard sources to allow compilation:**
 
+https://github.com/dantecpu/kernel-syphyr-compiled/blob/master/wireguard_fix_compat.h
+
 https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_dst_cache.c
 
 https://github.com/htes9/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tunnel.c
+
+https://github.com/dantecpu/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tunnel_1.c
+
+https://github.com/dantecpu/kernel-syphyr-compiled/blob/master/wireguard_fix_udp_tunnel_2.c
 
 # Configure the cross compiler:
 `cd aarch64-linux-android-4.9`
